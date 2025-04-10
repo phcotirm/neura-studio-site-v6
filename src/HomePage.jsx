@@ -26,8 +26,8 @@ export default function HomePage() {
       <main className="pt-4 sm:pt-24 px-4 scroll-smooth">
         <section className="text-center py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
           <h1 className="text-3xl sm:text-4xl font-bold mb-4 max-w-2xl mx-auto leading-snug">
-            <span className="block">Conteúdo para redes sociais feito pela sua marca.</span>
-            <span className="block">Gerado por uma IA que entende seu estilo.</span>
+            <span className="block">Conteúdo para redes sociais feito com um comendo.</span>
+            <span className="block">Gerado por uma IA que entende a sua marca.</span>
           </h1>
           <p className="text-base sm:text-lg max-w-xl mx-auto mb-6">
             Criamos um agente de IA personalizado, treinado com a identidade da sua marca,
