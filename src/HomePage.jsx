@@ -82,7 +82,7 @@ export default function HomePage() {
             <div><strong>✔️ Sugestões visuais:</strong> Descreve imagens ideais com cor, tipografia e estilo.</div>
             <div><strong>📆 Campanhas:</strong> Cria conteúdos para datas e temas como Black Friday, lançamentos etc.</div>
             <div><strong>🔄 Adaptação por rede:</strong> Ajusta o mesmo conteúdo para Instagram, LinkedIn e mais.</div>
-            <div><strong>🧐 Análise de artes:</strong> Avalia se está coerente com sua identidade visual e tom.</div>>
+            <div><strong>🧐 Análise de artes:</strong> Avalia se está coerente com sua identidade visual e tom.</div>>>
           </div>
         </section>
 
