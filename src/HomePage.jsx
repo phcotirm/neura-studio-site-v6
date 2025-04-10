@@ -1,7 +1,7 @@
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
-      <header className="fixed top-0 w-full z-50 bg-white shadow-md p-4 flex items-center justify-between flex-wrap sm:flex-nowrap">
+      <header className="w-full bg-white shadow-md p-4 flex items-center justify-between flex-wrap sm:flex-nowrap sm:fixed sm:top-0 sm:z-50">
         <div className="flex items-center space-x-2">
           <img src="https://i.ibb.co/35khfPg8/Chat-GPT-Image-9-de-abr-de-2025-13-14-31.png" alt="BrandBot Logo" className="w-8 h-8" />
           <span className="text-lg font-bold">Neura Studio</span>
@@ -18,10 +18,10 @@ export default function HomePage() {
         </a>
       </header>
 
-      <main className="pt-32 px-4">
+      <main className="pt-4 sm:pt-20 px-4">
         <section className="text-center py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
           <h1 className="text-3xl sm:text-4xl font-bold mb-4 max-w-2xl mx-auto leading-snug">
-            Sua marca no controle. Sua identidade no conteúdo.<br />Com o poder criativo de uma IA personalizada.
+            Conteúdo para redes sociais feito pela sua marca.<br />Gerado por uma IA que entende seu estilo.
           </h1>
           <p className="text-base sm:text-lg max-w-xl mx-auto mb-6">
             Criamos um agente de IA personalizado, treinado com a identidade da sua marca, que gera posts prontos, ideias visuais e campanhas inteiras — direto no seu tom, do seu jeito.
@@ -32,36 +32,29 @@ export default function HomePage() {
         </section>
 
         <section id="how-it-works" className="py-16 text-center">
-          <h2 className="text-2xl font-semibold mb-6">Como Funciona</h2>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto">
-            <div>
-              <h3 className="font-bold mb-2">1. Coleta da marca</h3>
-              <p className="text-sm">Reunimos guia visual, tom de voz e materiais da empresa.</p>
-            </div>
-            <div>
-              <h3 className="font-bold mb-2">2. Adaptação para IA</h3>
-              <p className="text-sm">Transformamos os dados em linguagem que a IA compreende.</p>
-            </div>
-            <div>
-              <h3 className="font-bold mb-2">3. Criação do agente</h3>
-              <p className="text-sm">Montamos um GPT exclusivo com a sua identidade de marca.</p>
-            </div>
-            <div>
-              <h3 className="font-bold mb-2">4. Onboarding</h3>
-              <p className="text-sm">Você recebe o link e aprende a usar o agente como parte do time.</p>
-            </div>
+          <h2 className="text-2xl font-semibold mb-6">Como seu agente de IA ganha vida</h2>
+          <div className="max-w-3xl mx-auto text-sm text-gray-700">
+            <p className="mb-6">
+              Tudo começa com a sua marca. Coletamos seu guia visual, tom de voz, cores, fontes, campanhas anteriores, e transformamos isso em instruções que a IA entende.
+            </p>
+            <p>
+              Depois, criamos seu agente dentro do ChatGPT Plus — pronto para gerar ideias, escrever textos e sugerir imagens com a sua cara. Você acessa via link, sem precisar instalar nada.
+            </p>
           </div>
         </section>
 
         <section id="features" className="py-16 bg-gray-100 text-center">
-          <h2 className="text-2xl font-semibold mb-6">O que o Agente faz por você</h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto text-left">
-            <div><strong>📝 Textos:</strong> Legendas, chamadas e CTAs no seu tom.</div>
-            <div><strong>🎨 Layouts:</strong> Sugestões visuais para posts, carrosséis e stories.</div>
-            <div><strong>🗓️ Pautas:</strong> Ideias semanais, mensais e por campanha.</div>
-            <div><strong>🔄 Adaptação:</strong> Ajusta o conteúdo para cada rede social.</div>
-            <div><strong>🧐 Análises:</strong> Avalia se uma arte está de acordo com sua marca.</div>
-            <div><strong>✨ Criação visual:</strong> Sugere ideias e composições de arte com base na identidade visual.</div>
+          <h2 className="text-2xl font-semibold mb-6">Seu novo social media está sempre disponível</h2>
+          <p className="text-gray-600 text-sm mb-10 max-w-2xl mx-auto">
+            Seu agente é mais que um gerador de textos. Ele entende seu branding, seu público e o que funciona. Ele entrega:
+          </p>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto text-left text-sm">
+            <div><strong>🧠 Criação de artes:</strong> Cria artes visuais completas com base no estilo da sua marca.</div>
+            <div><strong>📝 Legendas prontas:</strong> Sempre com o tom da sua marca, sem blá-blá-blá genérico.</div>
+            <div><strong>🎨 Sugestões visuais:</strong> Descreve imagens ideais com cor, tipografia e estilo.</div>
+            <div><strong>📆 Campanhas:</strong> Cria conteúdos para datas e temas como Black Friday, lançamentos etc.</div>
+            <div><strong>🔄 Adaptação por rede:</strong> Ajusta o mesmo conteúdo para Instagram, LinkedIn e mais.</div>
+            <div><strong>🧐 Análise de artes:</strong> Avalia se está coerente com sua identidade visual e tom.</div>
           </div>
         </section>
 
