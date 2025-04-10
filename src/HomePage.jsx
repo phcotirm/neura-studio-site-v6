@@ -86,12 +86,12 @@ export default function HomePage() {
             Seu agente é mais que um gerador de textos. Ele entende seu branding, seu público e o que funciona. Ele entrega:
           </p>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto text-left text-sm">
+            <div><strong>🎨 Criação de artes:</strong> Cria artes visuais completas com base no estilo da sua marca.</div>
             <div><strong>📝 Legendas prontas:</strong> Sempre com o tom da sua marca, sem blá-blá-blá genérico.</div>
-            <div><strong>🎨 Sugestões visuais:</strong> Descreve imagens ideais com cor, tipografia e estilo.</div>
+            <div><strong>✔️ Sugestões visuais:</strong> Descreve imagens ideais com cor, tipografia e estilo.</div>
             <div><strong>📆 Campanhas:</strong> Cria conteúdos para datas e temas como Black Friday, lançamentos etc.</div>
             <div><strong>🔄 Adaptação por rede:</strong> Ajusta o mesmo conteúdo para Instagram, LinkedIn e mais.</div>
-            <div><strong>🧐 Análise de artes:</strong> Avalia se está coerente com sua identidade visual e tom.</div>
-            <div><strong>🧠 Criação de artes:</strong> Sugere ideias visuais completas com base no seu estilo.</div>
+            <div><strong>🧐 Análise de artes:</strong> Avalia se está coerente com sua identidade visual e tom.</div
           </div>
         </section>
 
