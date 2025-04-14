@@ -1,20 +1,34 @@
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
-      <header className="w-full bg-white shadow-md p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between sm:fixed sm:top-0 sm:z-50">
-        <div className="flex items-center justify-between">
+      <header className="w-full bg-white shadow-md p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between fixed top-0 z-50">
+        <div className="flex items-center justify-between w-full">
           <div className="flex items-center space-x-2">
             <img src="https://i.ibb.co/35khfPg8/Chat-GPT-Image-9-de-abr-de-2025-13-14-31.png" alt="Logo Neura Studio" className="w-8 h-8" />
             <span className="text-lg font-bold">Neura Studio</span>
           </div>
+          <button
+            className="sm:hidden block text-gray-700 focus:outline-none"
+            onClick={() => {
+              const nav = document.getElementById('mobile-nav');
+              nav.classList.toggle('hidden');
+            }}
+          >
+            ☰
+          </button>
         </div>
-        <nav className="flex flex-col sm:flex-row flex-wrap sm:space-x-4 items-center w-full sm:w-auto mt-4 sm:mt-0">
-          <a href="#testimonials" className="text-sm hover:text-blue-600">Depoimentos</a>
-          <a href="#how-it-works" className="text-sm hover:text-blue-600">Como Funciona</a>
-          <a href="#features" className="text-sm hover:text-blue-600">O Que Ele Faz</a>
-          <a href="#plans" className="text-sm hover:text-blue-600">Planos</a>
-          <a href="#contact" className="text-sm hover:text-blue-600">Contato</a>
+
+        <nav
+          id="mobile-nav"
+          className="hidden sm:flex flex-col sm:flex-row flex-wrap sm:space-x-4 items-center w-full sm:w-auto mt-4 sm:mt-0"
+        >
+          <a href="#testimonials" className="text-sm py-2 hover:text-blue-600">Depoimentos</a>
+          <a href="#how-it-works" className="text-sm py-2 hover:text-blue-600">Como Funciona</a>
+          <a href="#features" className="text-sm py-2 hover:text-blue-600">O Que Ele Faz</a>
+          <a href="#plans" className="text-sm py-2 hover:text-blue-600">Planos</a>
+          <a href="#contact" className="text-sm py-2 hover:text-blue-600">Contato</a>
         </nav>
+
         <a
           href="https://wa.me/5561999167627?text=Ol%C3%A1,%20gostaria%20de%20entender%20melhor%20sobre%20o%20agente%20designer."
           className="mt-4 sm:mt-0 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg font-medium hover:bg-blue-700"
@@ -23,7 +37,7 @@ export default function HomePage() {
         </a>
       </header>
 
-      <main className="pt-4 sm:pt-24 px-4 scroll-smooth">
+      <main className="pt-24 px-4 scroll-smooth">
         <section className="text-center py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
           <h1 className="text-3xl sm:text-4xl font-bold mb-4 max-w-2xl mx-auto leading-snug">
             <span className="block">Conteúdo para redes sociais com apenas um comando</span>
@@ -35,7 +49,7 @@ export default function HomePage() {
           </p>
           <a
             href="https://wa.me/5561999167627?text=Ol%C3%A1,%20gostaria%20de%20entender%20melhor%20sobre%20o%20agente%20designer."
-            className="px-6 py-3 bg-blue-600 text-white text-sm sm:text-base font-semibold rounded-xl shadow hover:bg-blue-700"
+            className="px-6 py-3 bg-blue-600 text-white text-base font-semibold rounded-xl shadow hover:bg-blue-700"
           >
             Quero meu agente criativo
           </a>
@@ -43,13 +57,13 @@ export default function HomePage() {
 
         <section id="testimonials" className="py-16 bg-gray-100 text-center">
           <h2 className="text-2xl font-semibold mb-6">Depoimentos</h2>
-          <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto">
-            <div className="bg-white p-6 rounded shadow">
+          <div className="flex overflow-x-auto space-x-4 px-4">
+            <div className="bg-white p-6 rounded shadow min-w-[300px]">
               <img src="https://i.ibb.co/yFPd4sZy/case.png" alt="Case Capital" className="mb-4 rounded" />
               <p className="text-sm italic">“O agente agilizou nosso dia a dia. Gera artes com a identidade da empresa sem a gente perder tempo com briefing.”</p>
               <p className="mt-2 font-bold">Marcelo Rodrigues, CEO – Catedral Transportadora</p>
             </div>
-            <div className="bg-white p-6 rounded shadow">
+            <div className="bg-white p-6 rounded shadow min-w-[300px]">
               <img src="https://i.ibb.co/60wqG6Bk/case-2.png" alt="Case Cleo" className="mb-4 rounded" />
               <p className="text-sm italic">“Crio as ideias no meu estilo, ele escreve e sugere as artes. Nunca postamos com tanta constância.”</p>
               <p className="mt-2 font-bold">Cleonice C., CEO – Cléo Cabeleireiros</p>
@@ -59,30 +73,28 @@ export default function HomePage() {
 
         <section id="how-it-works" className="py-16 text-center">
           <h2 className="text-2xl font-semibold mb-6">Como seu agente de IA ganha vida</h2>
-          <div className="max-w-3xl mx-auto text-sm text-gray-700">
-            <p className="mb-6">
-              Tudo começa com a sua marca. Coletamos seu guia visual, tom de voz, cores, fontes,
-              campanhas anteriores, e transformamos isso em instruções que a IA entende.
-            </p>
-            <p>
-              Depois, criamos seu agente dentro do ChatGPT Plus — pronto para gerar ideias,
-              escrever textos e sugerir imagens com a sua cara. Você acessa via link, sem precisar instalar nada.
-            </p>
-          </div>
+          <details className="max-w-3xl mx-auto text-sm text-gray-700 bg-gray-50 rounded p-4 cursor-pointer">
+            <summary className="font-semibold mb-2">Veja como funciona</summary>
+            <p className="mb-4">Coletamos seu guia visual, tom de voz, cores, fontes e campanhas anteriores.</p>
+            <p>Criamos seu agente dentro do ChatGPT Plus — sem instalação. Acesso via link com tudo pronto.</p>
+          </details>
         </section>
 
         <section id="features" className="py-16 bg-gray-100 text-center">
           <h2 className="text-2xl font-semibold mb-6">Seu novo social media está sempre disponível</h2>
-          <p className="text-gray-600 text-sm mb-10 max-w-2xl mx-auto">
-            Seu agente é mais que um gerador de textos. Ele entende seu branding, seu público e o que funciona. Ele entrega:
-          </p>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto text-left text-sm">
-            <div><strong>🎨 Criação de artes:</strong> Cria artes visuais completas com base no estilo da sua marca.</div>
-            <div><strong>📝 Legendas prontas:</strong> Sempre com o tom da sua marca, sem blá-blá-blá genérico.</div>
-            <div><strong>✔️ Sugestões visuais:</strong> Descreve imagens ideais com cor, tipografia e estilo.</div>
-            <div><strong>📆 Campanhas:</strong> Cria conteúdos para datas e temas como Black Friday, lançamentos etc.</div>
-            <div><strong>🔄 Adaptação por rede:</strong> Ajusta o mesmo conteúdo para Instagram, LinkedIn e mais.</div>
-            <div><strong>🧐 Análise de artes:</strong> Avalia se está coerente com sua identidade visual e tom.</div>
+          <div className="overflow-x-auto flex gap-4 px-4 snap-x">
+            {[
+              "🎨 Criação de artes: Cria artes visuais completas com base no estilo da sua marca.",
+              "📝 Legendas prontas: Sempre com o tom da sua marca, sem blá-blá-blá genérico.",
+              "✔️ Sugestões visuais: Descreve imagens ideais com cor, tipografia e estilo.",
+              "📆 Campanhas: Cria conteúdos para datas e temas como Black Friday, lançamentos etc.",
+              "🔄 Adaptação por rede: Ajusta o mesmo conteúdo para Instagram, LinkedIn e mais.",
+              "🧐 Análise de artes: Avalia se está coerente com sua identidade visual e tom."
+            ].map((item, i) => (
+              <div key={i} className="bg-white text-left min-w-[260px] p-4 rounded shadow-sm">
+                {item}
+              </div>
+            ))}
           </div>
         </section>
 
@@ -121,7 +133,7 @@ export default function HomePage() {
 
       <a
         href="https://wa.me/5561999167627?text=Ol%C3%A1,%20gostaria%20de%20entender%20melhor%20sobre%20o%20agente%20designer."
-        className="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 p-3 rounded-full shadow-lg"
+        className="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 p-4 rounded-full shadow-lg"
         aria-label="Fale no WhatsApp"
       >
         <img
